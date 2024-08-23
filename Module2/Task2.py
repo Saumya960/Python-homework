@@ -34,16 +34,28 @@ grams_per_lot = 13.3
 talents = float(input("Enter talents: "))
 pounds = float(input("Enter pounds: "))
 lots = float(input("Enter lots: "))
-#convert talents to grams
 grams_from_talents = talents * pounds_per_talent * lots_per_pound * grams_per_lot
-#convert pounds to grams
 grams_from_pounds = pounds * lots_per_pound * grams_per_lot
-#convert lots to gram
 grams_from_lots = lots * grams_per_lot
 total_grams = grams_from_talents + grams_from_pounds +  grams_from_lots
-#convert grams to kilogram
 kilograms = int(total_grams / 1000)
 remaining_grams = total_grams % 1000
 print(f"\nThe weight in modern units:\n{kilograms} kilograms and {remaining_grams:.2f} grams.")
+
+#Question6
+import random
+num1 = random.randint (0,9 )
+num2 = random.randint ( 0,9)
+num3 = random.randint (0,9)
+print(f'code 1: {num1}{num2}{num3}')
+num4 = random.randint (1,6)
+num5 = random.randint (1,6)
+num6 = random.randint (1,6)
+num7 = random.randint (1,6)
+print(f'code 2: {num4}{num5}{num6}{num7}')
+
+
+
+
 
 
