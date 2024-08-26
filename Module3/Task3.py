@@ -22,20 +22,20 @@ else :
     print("You entered an invalid cabin class")
 
 #Question3
-biological_gender = input("Enter the biological gender(adult_male,adult_female): ")
+biological_gender = input("Enter the biological gender(male/female): ")
 hemoglobin_value = float(input("Enter the hemoglobin value: "))
-if biological_gender == "adult_female":
-    if 117 <= hemoglobin_value <= 155:
-        print("Hemoglobin value is normal")
-    elif hemoglobin_value < 117:
+if biological_gender == "female":
+    if hemoglobin_value < 117:
         print("Hemoglobin value is law")
+    elif 117 <= hemoglobin_value <= 155:
+        print("Hemoglobin value is normal")
     else:
         print("Hemoglobin value is high")
-elif biological_gender == "adult female":
-    if 134 <= hemoglobin_value <= 167:
-        print("Hemoglobin value is normal")
-    elif hemoglobin_value < 134:
+elif biological_gender == "male":
+    if hemoglobin_value < 134:
         print("Hemoglobin value is law")
+    elif 134 <= hemoglobin_value <= 167:
+        print("Hemoglobin value is normal")
     else:
         print("Hemoglobin value is high")
 else:
