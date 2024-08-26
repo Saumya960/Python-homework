@@ -1,6 +1,10 @@
+#Question1
 length = float(input("Enter the length of a Zander in centimeters: "))
-size_limit = 42
-if length <= size_limit:
+if length >= 42:
+    print('Pocket the fish')
+else:
     print("Release the fish back into the lake")
-below_limit = size_limit - length
+below_limit = 42 - length
 print(f"The zander is {below_limit} centimeters below the size limit.")
+
+#Question2
