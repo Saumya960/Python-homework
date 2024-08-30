@@ -39,6 +39,19 @@ else:
 
 
 #Question4
+import random
+
+number_guess = random.randint(1, 10)
+while True:
+    user_guess = int(input("Guess a number between 1 and 10: "))
+    if user_guess < number_guess:
+            print("Your guess is too low.")
+    elif user_guess > number_guess:
+            print("Your guess is too high!")
+    else:
+            print("Won! You guessed the number!")
+            break
+
 
 
 
