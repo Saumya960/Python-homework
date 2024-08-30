@@ -26,22 +26,17 @@ while True:
 
     if user_input == "":
         break
-
-
     number = float(user_input)
-
-
     if smallest == 0 or number < smallest:
         smallest = number
     if largest == 0 or number > largest:
         largest = number
-
-
 if smallest != 0 and largest != 0:
     print("Smallest number is:", smallest)
     print("Largest number is:", largest)
 else:
     print("No numbers were entered.")
+
 
 #Question4
 
