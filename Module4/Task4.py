@@ -1,4 +1,6 @@
 #Question1
+from ctypes import pythonapi
+
 number = 1
 while number <= 1000:
     if number % 3 == 0:
@@ -51,6 +53,25 @@ while True:
     else:
             print("Won! You guessed the number!")
             break
+
+
+#Question5
+correct_username = "python"
+correct_password = "rules"
+attempts = 0
+max_attempts = 5
+while attempts < max_attempts:
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    if username == correct_username and password == correct_password:
+        print("Welcome!")
+        break
+    else:
+        attempts += 1
+        print(f"Incorrect username or password.Try again.")
+    if attempts == max_attempts:
+            print("Access denied.")
+
 
 
 
