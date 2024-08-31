@@ -58,35 +58,32 @@ while True:
 #Question5
 correct_username = "python"
 correct_password = "rules"
-attempts = 0
 max_attempts = 5
-while attempts < max_attempts:
+while max_attempts > 0:
     username = input("Enter username: ")
     password = input("Enter password: ")
     if username == correct_username and password == correct_password:
         print("Welcome!")
         break
-    else:
-        attempts += 1
-        print(f"Incorrect username or password.Try again.")
-    if attempts == max_attempts:
-            print("Access denied.")
 
-
-
+    max_attempts = max_attempts - 1 #max_attempts -=1
+else:
+    print("Access denied.")
 
 
 #Question6
 import random
-N = 1000000
+random_points = int(input("Enter the number of random points to be generated: "))
 n = 0
 iterator = 0
 
-while iterator < N:
+while iterator < random_points:
     x = random.uniform(-1, 1)
     y = random.uniform(-1, 1)
     if x ** 2 + y ** 2 < 1:
         n += 1
+
     iterator += 1
-print(4 * n / N)
+print(4 * n / random_points)
+
 
