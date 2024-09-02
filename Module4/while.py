@@ -1,5 +1,4 @@
 #Question1
-from ctypes import pythonapi
 
 number = 1
 while number <= 1000:
@@ -84,6 +83,7 @@ while iterator < random_points:
         n += 1
 
     iterator += 1
-print(4 * n / random_points)
+print (4 * n / random_points)
+
 
 
