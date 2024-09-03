@@ -10,7 +10,7 @@ print(f"The sum of all dice roll is: {sum}")
 
 
 #Question2
-numbers =  []
+numbers = []
 while True:
      user_input = input("Enter a number: ")
      if user_input == "":
