@@ -24,3 +24,6 @@ print("The five greatest numbers are:")
 for number in greatest_numbers:
      print(number)
 
+
+#Question3
+
