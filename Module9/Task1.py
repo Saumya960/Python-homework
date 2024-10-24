@@ -28,19 +28,16 @@ def main():
     my_car.properties()
 
     my_car.accelerate(30)
-    print(f"\nCurrent speed: {my_car.current_speed} km/h")
+    print(f"\nAfter accelerating 30km/h, Current speed: {my_car.current_speed} km/h")
 
     my_car.drive(1.5)
-    print(f"\nTravelled Distance: {my_car.travelled_distance} km")
+    print(f"\nAfter driving 1.5 hours, Travelled Distance: {my_car.travelled_distance} km")
 
     my_car.accelerate(70)
-    print(f"\nCurrent speed: {my_car.current_speed} km/h")
+    print(f"\nAfter accelerating 70km/h,Current speed: {my_car.current_speed} km/h")
 
     my_car.drive(2)
-    print(f"\nTravelled Distance: {my_car.travelled_distance} km")
-
-    my_car.accelerate(50)
-    print(f"\nCurrent speed: {my_car.current_speed} km/h")
+    print(f"\nAfter driving 2 hours, Travelled Distance: {my_car.travelled_distance} km")
 
     my_car.accelerate(-200)
     print(f"\nFinal speed: {my_car.current_speed} km/h")
