@@ -15,4 +15,8 @@ class Building:
         print(f"Moving elevator {num}")
         self.elevators[num-1].go_to_floor(destination_floor)
 
-
+    def fire_alarm(self):
+        print("Fire alarm activated, please move to the bottom floor!")
+        for i, elevator in enumerate(self.elevators, start = 1):
+            print(f'Moving elevator {i} to the bottom floor.')
+            elevator.go_to_floor(self.bottom_floor)
