@@ -1,20 +1,25 @@
-from logging import exception
-
 import requests
 import json
 
-keyword = input("Enter keyword: ")
+lat = 60
+lon = 21
+API_key = "29aa75f05e52bedc66ae97242689d7d9"
 
+request = f"https://api.openweathermap.org/data/2.5/weather?units=metric&lat={lat}&lon={lon}&appid={API_key}"
 
-request = "https://api.tvmaze.com/search/shows?q=" + keyword
 try:
     response = requests.get(request)
-    print(response.status_code)
-    if response.ok:
-        ##print(json.dumps(response, indent=2))
-        tv_shows = response.json()
-        for tv_show in tv_shows:
-            print(tv_show["show"]["name"])
+    if not response.ok:
+        raise requests.exceptions.RequestsWarning()
+
+    weather = response.json()
+
+    print(f"""
+    Location: {weather['name']}
+    Temperature: {weather['main']['temp']} degrees
+    """)
 
 except requests.exceptions.RequestException as error:
-    print(error)
+    print('Request could not be completed.')
+except requests.exceptions.RequestsWarning as error:
+    print('Invalid request')
